@@ -112,4 +112,4 @@ def is_prime(candidate):
     return True
 
 
-print(baillie_psw(2305843009213693951))
+print(is_prime(2305843009213693951))

@@ -1,7 +1,7 @@
 from symbols import legendre_symbol
 
 
-def inverse_mod(a, m):
+def modular_inv(a, m):
     """Inverse of a mod m."""
 
     if a < 0 or m <= a:
