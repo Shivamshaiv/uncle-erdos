@@ -92,4 +92,4 @@ def testFactorRho():
 	p = factorRho(n,x_1)
 	print ("p=",p)
 
-#print(factor(459245788322547735796439))
+print(factor(2305843009213693957))

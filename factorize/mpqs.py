@@ -642,6 +642,6 @@ def find_semiprimes_of_order(order):
   num2 = _find_prime_near(order+1)
   return num1*num2
 
-p = find_semiprimes_of_order(70)
+p = find_semiprimes_of_order(20)
 print(p)
 print(factor(p))
