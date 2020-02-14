@@ -4,7 +4,7 @@ import time
 import Session_State as ss
 from datetime import datetime
 
-SL = ss.get(Multichain=[],Problems=[],Algos=[],Members=[],P={},Status='',Ts=[])
+SL = ss.get(Multichain=[],Problems=[],Algos=[],Members=[],P={},Status='')
 
 st.header('Uncle Erdos : A Depiction')
 
@@ -13,7 +13,6 @@ st.sidebar.header('Panel')
 ID = st.sidebar.text_input('Enter ID:',' ')
 Problem = st.sidebar.text_input('Enter name of Problem',' ')
 Algo = st.sidebar.text_input('Enter name of Algorithm :',' ')
-
 
 def Chain(C_No,Problem_name,User_ID,Algorithm):
     if SL.Status == '10':
@@ -24,8 +23,7 @@ def Chain(C_No,Problem_name,User_ID,Algorithm):
         SL.Multichain.append({})
         now = datetime.now()
         Timestamp = now.strftime("%d/%m/%Y %H:%M:%S")
-        SL.Multichain[Index][SL.Problems[Index]] = {Algorithm : [[C_No,User_ID,Timestamp]]}   
-    
+        SL.Multichain[Index][SL.Problems[Index]] = {Algorithm : [[C_No,User_ID,Timestamp]]}       
     elif SL.Status == '01' or SL.Status == '00':
         Index = SL.Problems.index(Problem_name)
         if SL.Status == '01':
